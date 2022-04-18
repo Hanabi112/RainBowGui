@@ -1,7 +1,7 @@
 if game.CoreGui:FindFirstChild("FluxLib") then
-        game:GetService("CoreGui").FluxLib:Destroy()
-    end
-    local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
+    game:GetService("CoreGui").FluxLib:Destroy()
+end
+local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
     local PresetColor = Color3.fromRGB(66, 134, 255)
     local UserInputService = game:GetService("UserInputService")
     local TweenService = game:GetService("TweenService")
@@ -347,7 +347,7 @@ if game.CoreGui:FindFirstChild("FluxLib") then
             end
         )
 
-        function Flux:Notification(desc,buttontitle)
+        function Flux:Notification(Title,desc,buttontitle)
             for i, v in next, MainFrame:GetChildren() do
                 if v.Name == "NotificationBase" then
                     v:Destroy()
@@ -411,7 +411,7 @@ if game.CoreGui:FindFirstChild("FluxLib") then
             NotificationTitle.Position = UDim2.new(0.0400609747, 0, 0.0761325806, 0)
             NotificationTitle.Size = UDim2.new(0, 111, 0, 34)
             NotificationTitle.Font = Enum.Font.GothamBold
-            NotificationTitle.Text = Title.Text .. " | NOTIFICATION"
+            NotificationTitle.Text = Title.. " | NOTIFICATION"
             NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             NotificationTitle.TextSize = 24.000
             NotificationTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -4056,7 +4056,7 @@ if game.CoreGui:FindFirstChild("FluxLib") then
         end
         return Tabs
     end
-    if _G.Toggle == nil then
-        _G.Toggle = Enum.KeyCode.RightControl
-    end
 return Flux
+if _G.Toggle == nil then
+    _G.Toggle = Enum.KeyCode.RightControl
+end
