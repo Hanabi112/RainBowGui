@@ -4056,7 +4056,7 @@ local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
         end
         return Tabs
     end
-return Flux
+return FluxLib
 if _G.Toggle == nil then
     _G.Toggle = Enum.KeyCode.RightControl
 end
